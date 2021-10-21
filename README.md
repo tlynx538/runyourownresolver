@@ -1,21 +1,19 @@
 # runyourownresolver
 Run your own recursive DNS resolver
 
+
+## Update Packages and Repositories
 `sudo apt-get update`
-
+## Installs Unbound
 `sudo apt-get install unbound`
-
+## Configuring Unbound
 `sudo mv  /etc/unbound /etc/unbound.dist`
 
 `mkdir /etc/unbound`
 
 `chown unbound.unbound /etc/unbound`
 
-
-`sudo -u unbound unbound-control-setup`
-
-`sudo curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache`
-
+## Copy the following unbound configuration
 ```
 server:
     interface: 127.0.0.1
@@ -34,9 +32,13 @@ log-time-ascii: yes
 
 log-queries: yes
 ```
+## Intializing Unbound
+`sudo -u unbound unbound-control-setup`
 
+`sudo curl --output /etc/unbound/root.hints https://www.internic.net/domain/named.cache`
 
+## Checking the unbound configuration
 `sudo unbound-checkconf`
 
-
+## Start Unbound
 `sudo /etc/init.d/unbound start`

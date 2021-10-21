@@ -4,7 +4,7 @@ Run your own recursive DNS resolver
 
 ## Update Packages and Repositories
 `sudo apt-get update`
-## Installs Unbound
+## Installing Unbound
 `sudo apt-get install unbound`
 ## Configuring Unbound
 `sudo mv  /etc/unbound /etc/unbound.dist`

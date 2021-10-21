@@ -32,6 +32,7 @@ log-time-ascii: yes
 
 log-queries: yes
 ```
+to unbound.conf and copy to /etc/unbound/
 ## Intializing Unbound
 `sudo -u unbound unbound-control-setup`
 
